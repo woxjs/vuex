@@ -11,5 +11,7 @@ export default app => {
       Store.registerModule(data[i]);
     }
   }
-  app.Store = app.context.Store = Store.init();
+  app.Store = Store;
+  app.context.Store = Store.init();
+  app.on('setup', options => options.store = app.context.Store);
 }
