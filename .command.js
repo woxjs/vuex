@@ -16,7 +16,7 @@ module.exports = (program, { tryCatch, exec, Addone }) => {
     
       cmd.complete({
         prefix: '[Make]',
-        message: `OK, cache file is created at '${output}'.`,
+        message: `OK, store file is created at '${output}'.`,
         suffix: '(@wox/vuex)'
       });
     })));

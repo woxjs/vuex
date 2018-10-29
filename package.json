@@ -1,6 +1,6 @@
 {
   "name": "@wox/vuex",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The vuex store of wox",
   "repository": {
     "type": "git",
