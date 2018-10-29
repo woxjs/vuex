@@ -1,8 +1,9 @@
+const path = require('path');
 module.exports = (program, { tryCatch, exec, Addone }) => {
   program
     .command('store <files...>')
     .description('add a new store file for vuex')
-    .action(files => tryCatch(async roll => await exec((cmd) => {
+    .action(files => tryCatch(async roll => await exec(async cmd => {
       const addone = new Addone(cmd, roll);
       let filePath = files.join('/');
       if (!/\.js$/.test(filePath)) filePath += '.js';
