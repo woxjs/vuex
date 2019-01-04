@@ -1,6 +1,6 @@
 {
   "name": "@wox/vuex",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The vuex store of wox",
   "repository": {
     "type": "git",
@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/woxjs/vuex#readme",
   "dependencies": {
-    "super-vuex": "^2.0.0"
+    "super-vuex": "^2.0.1"
   }
 }
