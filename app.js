@@ -5,13 +5,15 @@ Vue.use(Vuex);
 
 export default app => {
   const Store = new SuperVuex();
-  app.context.Store = Store;
-  app.Client.WebStore = data => {
-    for (const i in data) {
-      Store.registerModule(data[i]);
-    }
-  }
-  app.Store = Store;
-  app.context.Store = Store.init();
-  app.on('setup', options => options.store = app.context.Store);
+  app.context.$store = app.$store = Store;
+  app.on('DecorateDidInstalled', () => {
+    const items = app.$parser.configs.vuex;
+    items.forEach(context => {
+      app.$parser.ContextEach(context, (key, vuex) => {
+        if (typeof vuex === 'function') vuex = vuex(app);
+        Store.registerModule(vuex);
+      });
+    })
+  });
+  app.on('setup', options => options.store = Store);
 }
