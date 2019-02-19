@@ -6,6 +6,7 @@ Vue.use(Vuex);
 export default app => {
   const Store = new SuperVuex();
   app.context.$store = app.$store = Store;
+  Store.init();
   app.on('DecorateDidInstalled', () => {
     const items = app.$parser.configs.vuex;
     items.forEach(context => {
