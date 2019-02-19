@@ -16,5 +16,5 @@ export default app => {
       });
     })
   });
-  app.on('setup', options => options.store = Store);
+  app.on('setup', options => options.store = Store.store);
 }
