@@ -1,6 +1,6 @@
 {
   "name": "@wox/vuex",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "The vuex store of wox",
   "main": "commander.js",
   "repository": {
@@ -17,11 +17,11 @@
   },
   "homepage": "https://github.com/woxjs/vuex#readme",
   "dependencies": {
-    "super-vuex": "^3.0.0"
+    "super-vuex": "^3.0.0",
+    "ejs": "^2.6.1",
+    "fs-extra": "^7.0.1"
   },
   "devDependencies": {
-    "ejs": "^2.6.1",
-    "fs-extra": "^7.0.1",
     "vue": "^2.6.6"
   },
   "plugin": {
