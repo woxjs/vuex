@@ -1,7 +1,8 @@
 import { ChildVuex } from 'super-vuex';
-const child = new ChildVuex('<%=name%>');
-export default child;
-
-child.setState({
-  value: 'Hello world!'
-});
+export default app => {
+  const child = new ChildVuex('<%=name%>');
+  child.setState({
+    value: 'Hello world!'
+  });
+  return child;
+}
